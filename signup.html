@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <link rel="stylesheet" href="./signup.css" />
+  </head>
+
+  <body>
+    <div class="form-container">
+      <div class="top-headings">
+        <h3>Create Account</h3>
+        <p>Join Bridge of Hope and make a difference</p>
+      </div>
+
+      <form class="auth-form" action="/api/auth/signup" method="POST">
+        <!-- First Name -->
+        <label>First Name</label>
+        <input
+          type="text"
+          name="first_name"
+          placeholder="Enter your first name"
+          required
+        />
+
+        <!-- Last Name -->
+        <label>Last Name</label>
+        <input
+          type="text"
+          name="last_name"
+          placeholder="Enter your last name"
+          required
+        />
+
+        <!-- Email -->
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <!-- Password -->
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+
+        <!-- Mobile Number -->
+        <label>Mobile Number</label>
+        <input
+          type="tel"
+          name="mobile_number"
+          placeholder="Enter your Mobile Number"
+          required
+        />
+
+        <!-- City -->
+        <label>City</label>
+        <input
+          type="text"
+          name="city"
+          placeholder="Enter your city"
+          required
+        />
+
+        <!-- Role -->
+        <label>Register As</label>
+        <select name="role" required>
+          <option value="">Select role</option>
+          <option value="donor">Donor</option>
+          <option value="Trust">Trust</option>
+        </select>
+
+        <div class="buttons">
+          <button type="submit">Signup</button>
+        </div>
+
+        <p class="auth-links">
+          Already have an account?
+          <a href="./login.html">Login</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

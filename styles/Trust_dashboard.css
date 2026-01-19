@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f4f6f8;
+  font-family: "Poppins", sans-serif;
+}
+
+/*  HEADER  */
+header {
+  background-color: #185a9d;
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+.logo h1 {
+  margin-left: 50px;
+  color: aliceblue;
+  margin-right: 840px;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo h1:hover {
+  color: goldenrod;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: goldenrod;
+}
+
+/*  MAIN  */
+.head {
+  margin-left: 180px;
+  margin-top: 50px;
+}
+
+.head h3 {
+  font-weight: 700;
+  color: #185a9d;
+  font-size: 30px;
+}
+
+.head p {
+  margin-top: 8px;
+  color: #555;
+}
+
+/*  STATS BOXES  */
+.field-1 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.box {
+  height: 110px;
+  width: 280px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #185a9d;
+  transition: all 0.3s ease;
+}
+
+.box h4 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.box span {
+  font-size: 26px;
+  font-weight: bold;
+  color: #185a9d;
+}
+
+.box:hover {
+  transform: translateY(-8px);
+}
+
+/*  ACTION CARDS  */
+.field-2 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.boxing {
+  height: 170px;
+  width: 360px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #185a9d;
+  transition: all 0.3s ease;
+}
+
+.boxing h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.boxing p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.boxing:hover {
+  transform: translateY(-8px);
+}
+
+/*  BUTTONS  */
+.top-btn {
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: #185a9d;
+  border: none;
+}
+
+.top-btn a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+/*  FOOTER  */
+.footer {
+  background-color: #185a9d;
+  width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.set-1,
+.set-2,
+.set-3 {
+  color: #fff;
+}
+
+.set-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.set-2 a {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.set-2 a:hover {
+  color: goldenrod;
+}
+
+.set-3 p {
+  margin-top: 8px;
+}

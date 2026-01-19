@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+  background-color: #185a9d;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.logo h1 {
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: goldenrod;
+}
+
+/* Video */
+.top img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  box-sizing: content-box;
+  border-radius: 20px;
+}
+
+/* Sections */
+section {
+  padding: 30px 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.work-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  width: 230px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* How it works */
+.subtitle {
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.works {
+  display: flex;
+  gap: 30px;
+}
+
+.box {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+  background-color: #185a9d;
+  padding: 40px 80px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.set a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.set a:hover {
+  color: goldenrod;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+
+  <body>
+    <div class="auth-container">
+      <div class="headings">
+        <h3>Login</h3>
+        <p>Welcome back! Please login to continue.</p>
+      </div>
+
+      <form class="auth-form" action="/api/auth/login" method="POST">
+        <div class="box-1">
+          <label class="label-1">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div class="box-2">
+          <label class="label-2">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+
+        <div class="btn-section">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+
+      <p class="auth-link">
+        Don’t have an account?
+        <a href="./signup.html">Signup</a>
+      </p>
+    </div>
+  </body>
+</html>

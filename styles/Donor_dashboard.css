@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+header {
+  background-color: #185a9d;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo h1 {
+  color: #fff;
+}
+.logo h1:hover {
+  color: goldenrod;
+}
+.logo a {
+  text-decoration: none;
+}
+
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: goldenrod;
+}
+
+/*  MAIN */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.top-headings {
+  margin-top: 50px;
+}
+
+.top-headings h3 {
+  color: #185a9d;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.top-headings p {
+  color: #555;
+}
+
+/*  STATS  */
+.main-field {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.field {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.field:hover {
+  transform: translateY(-10px);
+}
+
+.field h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.field p {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.pending {
+  color: orange;
+}
+
+.accept {
+  color: #2fb344;
+}
+
+.reject {
+  color: red;
+}
+
+/* ACTION CARDS */
+.dashboard-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.bottom-field,
+.bottom-field-2 {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+.head {
+  text-align: center;
+}
+
+.head p {
+  margin-top: 10px;
+  color: #555;
+}
+
+/*  BUTTONS */
+.button-1,
+.button {
+  margin-top: 25px;
+}
+
+.button-1 a,
+.button a {
+  display: inline-block;
+  background-color: #185a9d;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 60px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.button-1 a:hover,
+.button a:hover {
+  background-color: #3a8cdf;
+}
+
+/*  MY DONATIONS TABLE  */
+.my-donations {
+  margin-top: 70px;
+}
+
+.my-donations h3 {
+  margin-bottom: 20px;
+  color: #185a9d;
+}
+
+.donation-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.donation-table thead {
+  background-color: #e6e6e6;
+}
+
+.donation-table th,
+.donation-table td {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.donation-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.donation-table tbody tr:hover {
+  background-color: #f1f6ff;
+}
+
+.status {
+  font-weight: 600;
+}
+
+.status.accepted {
+  color: #2fb344;
+}
+
+.status.pending {
+  color: orange;
+}
+
+/*  FOOTER  */
+.footer {
+  background-color: #185a9d;
+  width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 120px;
+  padding-bottom: 60px;
+}
+
+.set-1,
+.set-2,
+.set-3 {
+  color: #fff;
+}
+
+.set-2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.set-2 a {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.set-2 a:hover {
+  color: goldenrod;
+}
+
+.set-3 p {
+  margin-top: px;
+}
