@@ -24,7 +24,9 @@ header {
 .logo h1 {
   color: white;
 }
-
+.logo h1:hover{
+  color: goldenrod;
+}
 .nav-links {
   display: flex;
   gap: 30px;
@@ -40,13 +42,49 @@ header {
   color: goldenrod;
 }
 
-/* Video */
-.top img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  box-sizing: content-box;
+/* HERO IMAGE SECTION */
+.top {
+  position: relative;
+  height: 520px;
+  margin: 20px;
   border-radius: 20px;
+  background: url("./assets/hand-img-poster-img.jpg ") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  overflow: hidden;
+}
+
+.top .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.hero-text {
+  position: relative;
+  color: white;
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-text span {
+  color: goldenrod;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #f1f1f1;
 }
 
 /* Sections */

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
-    <link rel="stylesheet" href="./signup.css" />
+    <link rel="stylesheet" href="../styles/trust_signup.css" />
   </head>
 
   <body>
@@ -15,21 +15,29 @@
       </div>
 
       <form class="auth-form" action="/api/auth/signup" method="POST">
-        <!-- First Name -->
-        <label>First Name</label>
+        <!-- trust Name -->
+        <label>trust name</label>
         <input
           type="text"
-          name="first_name"
-          placeholder="Enter your first name"
+          name="trust name"
+          placeholder="Enter your trust name"
+          required
+        />
+        <!-- trust Address Name -->
+        <label>trust Address</label>
+        <input
+          type="text"
+          name="trust address"
+          placeholder="Enter your trust address"
           required
         />
 
-        <!-- Last Name -->
-        <label>Last Name</label>
+        <!-- Mobile Number -->
+        <label>Mobile Number</label>
         <input
-          type="text"
-          name="last_name"
-          placeholder="Enter your last name"
+          type="tel"
+          name="mobile_number"
+          placeholder="Enter your Mobile Number"
           required
         />
 
@@ -51,39 +59,33 @@
           required
         />
 
-        <!-- Mobile Number -->
-        <label>Mobile Number</label>
+        <!--  Username -->
+        <label> Username</label>
         <input
-          type="tel"
-          name="mobile_number"
-          placeholder="Enter your Mobile Number"
+          type="text"
+          name="Username"
+          placeholder="Enter your Username"
           required
         />
 
         <!-- City -->
         <label>City</label>
+        <input type="text" name="city" placeholder="Enter your city" required />
+        <!-- Pincode -->
+        <label>Pincode</label>
         <input
           type="text"
           name="city"
-          placeholder="Enter your city"
+          placeholder="Enter your pincode"
           required
         />
-
-        <!-- Role -->
-        <label>Register As</label>
-        <select name="role" required>
-          <option value="">Select role</option>
-          <option value="donor">Donor</option>
-          <option value="Trust">Trust</option>
-        </select>
-
         <div class="buttons">
           <button type="submit">Signup</button>
         </div>
 
         <p class="auth-links">
           Already have an account?
-          <a href="./login.html">Login</a>
+          <a href="../login.html">Login</a>
         </p>
       </form>
     </div>
