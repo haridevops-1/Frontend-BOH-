@@ -1,84 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trust_Dashboard</title>
+    <title>Trust Dashboard</title>
     <link rel="stylesheet" href="../styles/Trust_dashboard.css" />
   </head>
   <body>
-    <!-- Header -->
     <header>
       <div class="logo">
         <a href="#"><h1>BridgeOfHope</h1></a>
       </div>
 
-      <div class="nav-bars">
-        <nav class="nav-links">
-          <a href="../pages/Donor_dashboard.html">Dashboard</a>
-          <a href="../pages/Donor_profile.html">Edit profile</a>
-          <a href="#">Log out</a>
-        </nav>
-      </div>
+      <nav class="nav-links">
+        <a href="../pages/Trust_dashboard.html">Dashboard</a>
+        <a href="../pages/Trust_profile.html">Edit profile</a>
+        <a href="#">Log out</a>
+      </nav>
     </header>
 
-    <!-- main -->
     <main>
-      <div class="head">
-        <h3>Welcome, Trust</h3>
-        <p>Manage food donation requests and help those in need</p>
-      </div>
-
       <div class="container">
-        <div class="field-1">
-          <div class="box">
-            <h4>Incoming Requests</h4>
-            <span>0</span>
-          </div>
-          <div class="box">
-            <h4>Accepted Donations</h4>
-            <span>0</span>
-          </div>
-          <div class="box">
-            <h4>Rejected Donations</h4>
-            <span>0</span>
-          </div>
+        <div class="top-headings">
+          <h3>Welcome, Trust</h3>
+          <p>Manage food donation requests and help those in need.</p>
         </div>
 
-        <div class="field-2">
-          <div class="boxing">
-            <h3>Incoming Donations</h3>
-            <p>
-              View new donation requests from<br />
-              donors and respond.
-            </p>
-            <button class="top-btn">
-              <a href="../pages/Trust_Donaton_details.html">View Requests</a>
-            </button>
+        <div class="main-field">
+          <div class="field-pending">
+            <h3>Incoming Requests</h3>
+            <p class="pending">05</p>
+            <div class="pending-button">
+              <button>View Donations</button>
+            </div>
           </div>
-
-          <div class="boxing">
+          <div class="field-accepted">
             <h3>Accepted Donations</h3>
-            <p>
-              Review donations you have accepted <br />
-              previously.
-            </p>
-            <button class="top-btn"><a href="#">View Accepted</a></button>
+            <p class="accept">12</p>
+            <div class="accepted-button">
+              <button>View Donations</button>
+            </div>
           </div>
-
-          <div class="boxing">
+          <div class="field-rejected">
             <h3>Rejected Donations</h3>
-            <p>
-              View donation requests you have <br />
-              rejected.
-            </p>
-            <button class="top-btn"><a href="#">View Rejected</a></button>
+            <p class="reject">02</p>
+            <div class="rejected-button">
+              <button>View Donations</button>
+            </div>
           </div>
         </div>
+
+        <div class="dashboard-details">
+          <!-- <div class="bottom-field">
+            <div class="head">
+              <h3>Incoming Donations</h3>
+              <p>View new donation requests from<br />donors and respond.</p>
+              <div class="button-1">
+                <a href="../pages/Trust_Donation_details.html">View Requests</a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="bottom-field">
+            <div class="head">
+              <h3>Accepted Donations</h3>
+              <p>Review donations you have accepted <br />previously.</p>
+              <div class="button-1">
+                <a href="#">View Accepted</a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="bottom-field">
+              <div class="head">
+                <h3>Rejected Donations</h3>
+                <p>View donation requests you have <br />rejected.</p>
+                <div class="button-1">
+                  <a href="#">View Rejected</a>
+                </div>
+              </div>
+            </div> -->
+        </div>
+
+        <section class="recent-requests">
+          <h3>Recent Requests</h3>
+
+          <table class="request-table">
+            <thead>
+              <tr>
+                <th>Donor Name</th>
+                <th>Food Type</th>
+                <th>Qty</th>
+                <th>Location</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr
+                onclick="
+                  window.location.href = '../pages/Trust_Donation_details.html'
+                "
+              >
+                <td>John Doe</td>
+                <td>Rice & Sambar</td>
+                <td>25</td>
+                <td>Velachery</td>
+                <td class="status pending">Pending</td>
+              </tr>
+
+              <tr
+                onclick="
+                  window.location.href = '../pages/Trust_Donation_details.html'
+                "
+              >
+                <td>Freshworks Canteen</td>
+                <td>Veg Meals</td>
+                <td>50</td>
+                <td>Perungudi</td>
+                <td class="status accepted">Accepted</td>
+              </tr>
+
+              <tr
+                onclick="
+                  window.location.href = '../pages/Trust_Donation_details.html'
+                "
+              >
+                <td>Wedding Hall A</td>
+                <td>Buffet Leftovers</td>
+                <td>100</td>
+                <td>Adyar</td>
+                <td class="status completed">Completed</td>
+              </tr>
+
+              <tr
+                onclick="
+                  window.location.href = '../pages/Trust_Donation_details.html'
+                "
+              >
+                <td>Individual Donor</td>
+                <td>Bread Packets</td>
+                <td>10</td>
+                <td>Taramani</td>
+                <td class="status rejected">Rejected</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </div>
     </main>
 
-    <!-- Footer -->
     <footer>
       <div class="footer">
         <div class="set-1">

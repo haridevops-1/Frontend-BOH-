@@ -3,45 +3,42 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #f4f6f8;
+  background-color: #f4f4f4;
   font-family: "Poppins", sans-serif;
 }
 
-/*  HEADER  */
+/* HEADER */
 header {
   background-color: #185a9d;
-  display: flex;
   height: 60px;
+  display: flex;
   align-items: center;
+  padding: 0 40px;
 }
 
 .logo h1 {
-  margin-left: 50px;
-  color: aliceblue;
-  margin-right: 840px;
+  color: #fff;
 }
-
+.logo h1:hover {
+  color: goldenrod;
+}
 .logo a {
   text-decoration: none;
 }
 
-.logo h1:hover {
-  color: goldenrod;
-}
-
 .nav-links {
-  display: flex;
-  gap: 40px;
   margin-left: auto;
-  margin-right: 50px;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: aliceblue;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -49,107 +46,240 @@ header {
   color: goldenrod;
 }
 
-/*  MAIN  */
-.head {
-  margin-left: 180px;
+/* MAIN CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.top-headings {
   margin-top: 50px;
 }
 
-.head h3 {
-  font-weight: 700;
+.top-headings h3 {
   color: #185a9d;
+  margin-bottom: 10px;
   font-size: 30px;
 }
 
-.head p {
-  margin-top: 8px;
+.top-headings p {
   color: #555;
 }
 
-/*  STATS BOXES  */
-.field-1 {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 50px;
+/* STATS SECTION (3 Columns) */
+.main-field {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+/* TOP- SECTION */
+/* pending */
+.pending-button button {
+  padding: 15px;
+  background-color: #185a9d;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #f4f4f4;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-weight: medium;
+}
+/* accepted */
+.accepted-button button {
+  padding: 15px;
+  background-color: #185a9d;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #f4f4f4;
+  cursor: pointer;
+   font-family: "Poppins";
+   font-weight: medium;
+}
+/* rejected */
+.rejected-button button {
+  padding: 15px;
+  background-color: #185a9d;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #f4f4f4;
+  cursor: pointer;
+   font-family: "Poppins";
+   font-weight: medium;
+}
+/* Base Style for Stats Boxes */
+.field-pending,
+.field-accepted,
+.field-rejected {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  padding: 40px;
 }
 
-.box {
-  height: 110px;
-  width: 280px;
-  text-align: center;
-  border-radius: 15px;
-  background-color: #fff;
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #185a9d;
-  transition: all 0.3s ease;
+.field-pending:hover,
+.field-accepted:hover,
+.field-rejected:hover {
+  transform: translateY(-10px);
 }
 
-.box h4 {
-  margin-top: 20px;
-  font-size: 18px;
+.field-pending h3,
+.field-accepted h3,
+.field-rejected h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(112, 110, 110);
 }
 
-.box span {
-  font-size: 26px;
-  font-weight: bold;
-  color: #185a9d;
+/* Specific Top Border Colors */
+.field-pending {
+  border-top: 4px solid orange;
+}
+.field-accepted {
+  border-top: 4px solid #2fb344;
+}
+.field-rejected {
+  border-top: 4px solid red;
 }
 
-.box:hover {
-  transform: translateY(-8px);
+/* Text Colors */
+.field-pending p {
+  font-size: 40px;
+  font-weight: 600;
+  color: orange;
+}
+.field-accepted p {
+  font-size: 40px;
+  font-weight: 600;
+  color: #2fb344;
+}
+.field-rejected p {
+  font-size: 40px;
+  font-weight: 600;
+  color: red;
 }
 
-/*  ACTION CARDS  */
-.field-2 {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+/* ACTION CARDS (3 Columns) */
+.dashboard-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   margin-top: 60px;
 }
 
-.boxing {
-  height: 170px;
-  width: 360px;
-  border-radius: 20px;
-  background-color: #fff;
-  padding: 25px;
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #185a9d;
-  transition: all 0.3s ease;
+.bottom-field {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
+  transition: 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
-.boxing h3 {
+.bottom-field:hover {
+  transform: translateY(8px);
+}
+
+.head h3 {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
-.boxing p {
-  font-size: 16px;
+.head p {
+  margin-top: 10px;
   color: #555;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-.boxing:hover {
-  transform: translateY(-8px);
+/* BUTTONS */
+.button-1 {
+  margin-top: auto;
 }
 
-/*  BUTTONS  */
-.top-btn {
-  height: 40px;
-  width: 150px;
-  border-radius: 10px;
+.button-1 a {
+  display: inline-block;
   background-color: #185a9d;
-  border: none;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 40px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
-.top-btn a {
-  text-decoration: none;
-  color: #fff;
+.button-1 a:hover {
+  background-color: #3a8cdf;
+}
+
+/* RECENT REQUESTS TABLE */
+.recent-requests {
+  margin-top: 70px;
+}
+
+.recent-requests h3 {
+  margin-bottom: 20px;
+  color: #185a9d;
+  font-size: 24px;
+}
+
+.request-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.request-table thead {
+  background-color: #e6e6e6;
+}
+
+.request-table th,
+.request-table td {
+  padding: 16px 20px;
+  text-align: left;
   font-size: 14px;
 }
 
-/*  FOOTER  */
+.request-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.request-table tbody tr:hover {
+  background-color: #f1f6ff;
+}
+
+/* Table Status Colors */
+.status {
+  font-weight: 600;
+}
+.status.pending {
+  color: orange;
+}
+.status.accepted {
+  color: #2fb344;
+}
+.status.rejected {
+  color: red;
+}
+.status.completed {
+  color: #185a9d;
+} /* Blue for Completed */
+
+/* FOOTER */
 .footer {
   background-color: #185a9d;
   width: 100%;
@@ -158,6 +288,7 @@ header {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 120px;
+  padding-bottom: 60px;
 }
 
 .set-1,
@@ -169,6 +300,7 @@ header {
 .set-2 {
   display: flex;
   flex-direction: column;
+  margin-top: 70px;
 }
 
 .set-2 a {
@@ -182,5 +314,5 @@ header {
 }
 
 .set-3 p {
-  margin-top: 8px;
+  margin-top: 5px;
 }

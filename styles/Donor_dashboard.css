@@ -70,34 +70,110 @@ header {
 /*  STATS  */
 .main-field {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 280px);
   gap: 25px;
   margin-top: 40px;
 }
-
-.field {
+/* Field- 1 */
+.field-1 {
   background: #fff;
   border-radius: 10px;
-  text-align: center;
   padding: 30px 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
+  padding: 40px;
+  border-top: 4px solid black;
 }
 
-.field:hover {
+.field-1:hover {
   transform: translateY(-10px);
 }
 
-.field h3 {
-  font-size: 16px;
+.field-1 h3 {
+  font-size: 20px;
   margin-bottom: 10px;
+  color: rgb(112, 110, 110);
 }
 
-.field p {
+.field-1 p {
   font-size: 40px;
   font-weight: 600;
 }
+/* Field- 2 */
+.field-2 {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  padding: 40px;
+  border-top: 4px solid goldenrod;
+}
 
+.field-2:hover {
+  transform: translateY(-10px);
+}
+
+.field-2 h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(112, 110, 110);
+}
+
+.field-2 p {
+  font-size: 40px;
+  font-weight: 600;
+}
+/* Field- 3 */
+.field-3 {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  padding: 40px;
+  border-top: 4px solid rgb(23, 152, 23);
+}
+
+.field-3:hover {
+  transform: translateY(-10px);
+}
+
+.field-3 h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(112, 110, 110);
+}
+
+.field-3 p {
+  font-size: 40px;
+  font-weight: 600;
+}
+/* Field- 4 */
+.field-4 {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  padding: 40px;
+  border-top: 4px solid red;
+}
+
+.field-4:hover {
+  transform: translateY(-10px);
+}
+
+.field-4 h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(112, 110, 110);
+}
+
+.field-4 p {
+  font-size: 40px;
+  font-weight: 600;
+}
 .pending {
   color: orange;
 }
@@ -124,8 +200,13 @@ header {
   border-radius: 10px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
   padding: 30px;
+  padding: 80px;
+  transition: 0.3s ease;
 }
-
+.bottom-field:hover,
+.bottom-field-2:hover {
+  transform: translateY(8px);
+}
 .head {
   text-align: center;
 }

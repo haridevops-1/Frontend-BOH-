@@ -111,19 +111,19 @@ header {
 }
 
 .btn-1 {
-  background-color: green;
+  background-color:#368056;
 }
 
 .btn-1:hover {
-  background-color: rgb(29, 158, 29);
+  background-color: rgb(55, 130, 55);
 }
 
 .btn-2 {
-  background-color: red;
+  background-color: #A62639;
 }
 
 .btn-2:hover {
-  background-color: rgb(152, 35, 35);
+  background-color: rgb(202, 31, 31);
 }
 
 .buttons a {
