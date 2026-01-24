@@ -7,25 +7,33 @@
 }
 
 body {
-  background: #f4f6f8;
+  background: #f0f2f5; /* Slightly cleaner grey */
   font-family: "Poppins", sans-serif;
-  color: #222;
+  color: #333;
 }
 
-/*  HEADER  */
-
+/* HEADER */
 header {
-  background-color: #185a9d;
-  height: 60px;
+  background: linear-gradient(
+    90deg,
+    #185a9d 0%,
+    #12467d 100%
+  ); /* Pro Gradient */
+  height: 70px; /* Slight increase for breathing room */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo h1 {
   color: #fff;
-  font-size: 24px;
+  font-size: 26px;
+  letter-spacing: 0.5px;
 }
 
 .logo a {
@@ -34,104 +42,141 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 35px;
+  gap: 40px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
-/*  TOP HEAD  */
+.nav-links a:hover {
+  color: #fff;
+}
 
+/* TOP HEAD */
 .top-head {
   max-width: 1100px;
-  margin: 40px auto 20px;
+  margin: 50px auto 30px;
 }
 
 .top-head h3 {
-  font-size: 36px;
+  font-size: 32px; /* Balanced size */
   color: #185a9d;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .top-head p {
-  font-size: 18px;
-  color: #444;
+  font-size: 16px;
+  color: #666;
 }
 
-/*  CONTAINER  */
-
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
+  padding-bottom: 60px;
 }
 
-/*  CARD  */
-
+/* CARD */
 .card {
-  background: #f7f8fa;
+  background: #fff; /* Pure white for contrast */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 30px;
-  border-radius: 14px;
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.08);
+  padding: 30px 40px;
+  border-radius: 12px;
+  /* Modern, tighter shadow */
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eaecf0; /* Subtle border */
+  border-left: 6px solid #185a9d; /* Status Indicator Line */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography Hierarchy */
 .field-1 h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #1a1a1a;
 }
 
 .field-1 p {
-  font-size: 16px;
-  margin-bottom: 6px;
-  color: #333;
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #555;
+  display: flex; /* Aligns icons if added */
+  align-items: center;
+  gap: 10px;
 }
 
-/*  BUTTON  */
+.field-1 strong {
+  color: #888; /* Muted label color */
+  font-weight: 500;
+  width: 80px; /* Aligns the values */
+  display: inline-block;
+}
 
+/* BUTTON */
 button {
   height: 44px;
-  width: 130px;
-  border-radius: 25px;
+  width: 140px;
+  border-radius: 8px; /* Slightly less rounded is more modern */
   border: none;
   background-color: #185a9d;
   cursor: pointer;
   transition: 0.3s ease;
+  box-shadow: 0 4px 6px rgba(24, 90, 157, 0.2);
 }
 
 button a {
   text-decoration: none;
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
+  display: block; /* Makes the whole button clickable */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button:hover {
-  background-color: #3a8cdf;
+  background-color: #134b85;
+  transform: translateY(-1px);
 }
 
-/*  FOOTER  */
+/* FOOTER */
 .footer {
-  background-color: #185a9d;
+  background-color: #12467d; 
   width: 100%;
   height: 230px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 100px;
+  color: #fff;
 }
 
-.set-1,
-.set-2,
-.set-3 {
-  color: #fff;
+.set-1 p {
+  opacity: 0.7;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .set-2 {
@@ -139,16 +184,27 @@ button:hover {
   flex-direction: column;
 }
 
+.set-2 h3,
+.set-3 h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
 .set-2 a {
   text-decoration: none;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   margin-top: 8px;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 .set-2 a:hover {
   color: goldenrod;
+  padding-left: 5px;
 }
 
 .set-3 p {
-  margin-top: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
 }

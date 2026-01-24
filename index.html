@@ -1,14 +1,308 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bridge Of Hope</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f6f8; /* Softer professional grey */
+        color: #333;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(90deg, #185a9d 0%, #12467d 100%);
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo h1 {
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .logo h1:hover {
+        color: #f1c40f; /* Goldenrod variation */
+        transition: 0.3s;
+      }
+      .nav-links {
+        display: flex;
+        gap: 35px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #fff;
+      }
+
+      /* HERO IMAGE SECTION */
+      .top {
+        position: relative;
+        height: 550px;
+        margin: 20px;
+        border-radius: 20px;
+        /* Ensure you have the image, otherwise a fallback color is used */
+        background: url("./assets/hand-img-poster-img.jpg") center/cover no-repeat, #185a9d; 
+        display: flex;
+        align-items: center;
+        padding-left: 80px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      }
+
+      .top .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0.4) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+
+      .hero-text {
+        position: relative;
+        color: white;
+        max-width: 600px;
+        z-index: 2;
+        animation: fadeIn 1s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .hero-text h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .hero-text span {
+        color: #ffcc00; /* Brighter Goldenrod */
+      }
+
+      .hero-text p {
+        font-size: 18px;
+        color: #e0e0e0;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+      }
+
+      /* Sections */
+      section {
+        padding: 0; /* Reset global padding for better control */
+      }
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        color: #185a9d;
+        font-weight: 700;
+        position: relative;
+      }
+
+      /* About and How section */
+      .about {
+        display: flex;
+        justify-content: center;
+        gap: 60px; /* Clean gap instead of margins */
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Drop down section */
+      .about section {
+        width: 48%; /* Balanced width */
+        max-width: 550px;
+        text-align: left;
+      }
+
+      .about h2 {
+        text-align: left;
+        margin-left: 0; /* Reset manual margins */
+      }
+
+      /* how-section */
+      .how {
+        margin-left: 0; /* Reset manual margins */
+      }
+      .how h2 {
+        margin-left: 0; /* Reset manual margins */
+      }
+      /* Why section */
+      .why h2 {
+        margin-left: 0; /* Reset manual margins */
+      }
+      
+      .line {
+        width: 60px;
+        height: 4px;
+        background-color: #ffcc00; /* Goldenrod accent */
+        border: none;
+        margin-bottom: 20px;
+        border-radius: 2px;
+      }
+
+      /* --- The Accordion Styling --- */
+      .accordion {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        border: 1px solid #eef0f2;
+        overflow: hidden;
+      }
+
+      details {
+        border-bottom: 1px solid #f0f0f0;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+      }
+
+      details:last-child {
+        border-bottom: none;
+      }
+
+      details[open] {
+        background-color: #fdfdfd;
+      }
+
+      summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        cursor: pointer;
+        list-style: none;
+        font-size: 1.05rem;
+        color: #333;
+        padding: 10px 0;
+      }
+
+      summary:hover {
+        color: #185a9d;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      /* The Arrow Icon */
+      summary::after {
+        content: "❯";
+        font-size: 0.9rem;
+        color: #bbb;
+        transition: transform 0.3s ease;
+        transform: rotate(90deg);
+      }
+
+      details[open] summary::after {
+        transform: rotate(270deg); /* Smooth rotation */
+        color: #185a9d;
+      }
+
+      details p {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        line-height: 1.6;
+        color: #666;
+        font-size: 0.95rem;
+        text-align: left;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #0f2e46; /* Professional Navy */
+        padding: 60px 0;
+        margin-top: 50px;
+      }
+
+      .footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        color: white;
+        padding: 0 20px;
+      }
+
+      .set {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .set h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+
+      .set p {
+        opacity: 0.8;
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .set a {
+        display: block;
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        margin-top: 10px;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .set a:hover {
+        color: #ffcc00;
+        padding-left: 5px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .about { flex-direction: column; gap: 40px; }
+        .about section { width: 100%; max-width: 100%; }
+        .hero-text h1 { font-size: 36px; }
+        .top { padding-left: 30px; }
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Header -->
     <header>
       <div class="logo">
         <h1>BridgeOfHope</h1>
@@ -19,9 +313,7 @@
       </nav>
     </header>
 
-    <!-- Main -->
     <main>
-      <!-- Hero Image Section -->
       <section class="top">
         <div class="overlay"></div>
 
@@ -33,8 +325,9 @@
           <p>Turning surplus food into hope and happiness for those in need.</p>
         </div>
       </section>
-      <!-- WHY SECTION -->
+
       <div class="about">
+        
         <section class="why">
           <div class="line"></div>
           <h2>Why BridgeOfHope</h2>
@@ -113,7 +406,6 @@
       </div>
     </main>
 
-    <!-- Footer -->
     <footer>
       <div class="footer">
         <div class="set">

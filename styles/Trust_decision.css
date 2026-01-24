@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -7,150 +7,191 @@
 }
 
 body {
-  background: #f4f6f8;
-  font-family:  "Poppins", sans-serif;
+  background: #f0f2f5;
+  font-family: "Poppins", sans-serif;
+  color: #333;
 }
 
-/*  HEADER  */
+/* HEADER - Updated to match Dashboard Pro Style */
 header {
-  background-color: #185a9d;
+  background: linear-gradient(90deg, #185a9d 0%, #12467d 100%);
   position: sticky;
   top: 0;
   display: flex;
   align-items: center;
-  height: 60px;
-  padding: 0 40px;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
 .logo h1 {
-  color: aliceblue;
-  margin-right: 850px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .logo a {
   text-decoration: none;
 }
 
-.logo h1:hover {
-  color: goldenrod;
+.nav-bars {
+  /* Container for nav links */
 }
 
-/* navbar */
 .nav-links {
   display: flex;
   gap: 40px;
-  margin-left: auto;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: aliceblue;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: goldenrod;
+  color: #fff;
 }
 
-/*  MAIN  */
+/* MAIN CONTAINER */
 .container {
-  max-width: 900px;
-  margin: 40px auto;
+  max-width: 850px;
+  margin: 60px auto;
+  min-height: 60vh; /* Ensures footer doesn't float up */
 }
 
+/* TOP HEADINGS */
 .top-head {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center; /* Centered for focus */
 }
 
 .top-head h3 {
   color: #185a9d;
-  font-size: 28px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .top-head p {
-  margin-top: 8px;
+  color: #666;
+  font-size: 16px;
 }
 
-/* Donation details box */
+/* DONATION DETAILS CARD */
 .main-field {
   background: #fff;
-  padding: 25px;
-  border-radius: 10px;
+  padding: 10px 40px; /* Padding for the rows */
+  border-radius: 16px; /* Smoother corners */
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Professional Shadow */
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eef0f2;
 }
 
+/* Styling the <p> tags as Rows */
 .main-field p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  padding: 20px 0; /* Space between rows */
+  border-bottom: 1px solid #f0f0f0; /* Separator lines */
+  display: flex; /* Aligns label and value horizontally */
+  align-items: center;
+  color: #222;
 }
 
-/* Proper label spacing */
+/* Remove border from the last item */
+.main-field p:last-child {
+  border-bottom: none;
+}
+
+/* Label Styling */
 .main-field strong {
   display: inline-block;
-  width: 180px;
+  width: 200px; /* Fixed width for alignment */
+  color: #7f8c8d; /* Muted label color */
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
-/*  BUTTONS  */
+/* BUTTONS */
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 25px;
+  margin-top: 40px;
 }
 
 .btn-1,
 .btn-2 {
-  height: 45px;
-  width: 200px;
+  height: 50px;
+  width: 180px;
   border: none;
-  border-radius: 8px;
+  border-radius: 8px; /* Modern slightly squared corners */
   cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Accept Button (Green) */
 .btn-1 {
-  background-color:#368056;
+  background-color: #2fb344;
 }
-
 .btn-1:hover {
-  background-color: rgb(55, 130, 55);
+  background-color: #269037;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(47, 179, 68, 0.2);
 }
 
+/* Reject Button (Red) */
 .btn-2 {
-  background-color: #A62639;
+  background-color: #ef4444;
 }
-
 .btn-2:hover {
-  background-color: rgb(202, 31, 31);
+  background-color: #d32f2f;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(239, 68, 68, 0.2);
 }
 
 .buttons a {
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
-  display: block;
-  line-height: 45px;
-  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%; /* Clickable area fills button */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-/*  FOOTER  */
+/* FOOTER - Pro Navy Style */
 .footer {
-  background-color: #185a9d;
+  background-color: #12467d;
   width: 100%;
-  height: 230px;
+  height: 250px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 100px;
+  color: #fff;
 }
 
-.set-1,
-.set-2,
-.set-3 {
-  color: #fff;
+.set-1 p {
+  opacity: 0.7;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .set-2 {
@@ -158,17 +199,27 @@ header {
   flex-direction: column;
 }
 
+.set-2 h3,
+.set-3 h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
 .set-2 a {
   text-decoration: none;
-  color: #fff;
-  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 .set-2 a:hover {
   color: goldenrod;
+  padding-left: 5px;
 }
 
 .set-3 p {
-  margin-top: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
 }
-
