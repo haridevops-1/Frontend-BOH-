@@ -146,20 +146,20 @@ header {
 
 /* Accept Button (Green) */
 .btn-1 {
-  background-color: #2fb344;
+  background-color: #1f7a2e;
 }
 .btn-1:hover {
-  background-color: #269037;
+  background-color: #2aa53f;
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(47, 179, 68, 0.2);
 }
 
 /* Reject Button (Red) */
 .btn-2 {
-  background-color: #ef4444;
+  background-color: #7d1515;
 }
 .btn-2:hover {
-  background-color: #d32f2f;
+  background-color: #ca3535;
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(239, 68, 68, 0.2);
 }

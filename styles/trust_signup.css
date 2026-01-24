@@ -8,17 +8,25 @@
 
 body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
 /* Main container */
 .form-container {
-  width: 35%;
-  margin: 30px auto;
-  border-radius: 20px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 16px;
+  /* Professional Soft Shadow */
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
   background-color: #fff;
+  border: 1px solid #eef0f2;
 }
 
 /* top headings */
@@ -29,59 +37,92 @@ body {
 
 .top-headings h3 {
   color: #185a9d;
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .top-headings p {
-  color: #555;
+  color: #64748b;
+  font-size: 14px;
 }
 
 /* form */
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
 /* label */
 label {
-  margin-left: 10px;
-  font-weight: 500;
+  margin-left: 0;
+  font-weight: 600;
+  font-size: 13px;
+  color: #334155;
+  margin-bottom: 4px;
+  display: block;
 }
 
 /* input */
 input,
 select {
-  width: 90%;
-  margin-left: 10px;
-  height: 35px;
-  border-radius: 5px;
-  border: 1px solid #000;
-  padding: 6px;
+  width: 100%;
+  margin-left: 0;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 0 15px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #185a9d;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(24, 90, 157, 0.1);
 }
 
 /* button */
 button {
   height: 50px;
-  width: 90%;
-  margin: 20px 0 10px 10px;
+  width: 100%;
+  margin: 25px 0 10px 0;
   background-color: #185a9d;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   border: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #134b85;
 }
 
 /* auth links */
 .auth-links {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #64748b;
 }
 
 .auth-links a {
   text-decoration: none;
   color: #185a9d;
-  font-weight: 500;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.auth-links a:hover {
+  color: #0f3e6d;
+  text-decoration: underline;
 }

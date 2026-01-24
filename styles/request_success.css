@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f0f2f5; /* Clean Dashboard Grey */
+  background-color: #f0f2f5;
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
@@ -16,11 +16,11 @@ body {
 
 /* HEADER */
 header {
-  background: linear-gradient(90deg, #185a9d 0%, #12467d 100%);
+  background: #134b85;
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Automatically pushes logo left, nav right */
+  justify-content: space-between;
   padding: 0 50px;
   position: sticky;
   top: 0;
@@ -58,10 +58,10 @@ header {
 
 /* MAIN CONTENT */
 main {
-  flex: 1; /* Pushes footer down */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers content horizontally */
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -72,7 +72,7 @@ main {
 .back {
   width: 100%;
   display: flex;
-  justify-content: flex-start; /* Aligns to left */
+  justify-content: flex-start;
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -103,7 +103,7 @@ main {
   margin: 40px auto; /* Centers the card */
   padding: 50px 40px;
   border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   text-align: center;
   border: 1px solid #eef0f2;
   /* Animation for smooth entry */
@@ -130,7 +130,7 @@ main {
 
 /* THE CHECKMARK (Created via CSS to avoid changing HTML) */
 .message h2::before {
-  content: "✓"; /* Checkmark symbol */
+  content: "✓";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,7 +162,7 @@ main {
 /* VIEW DETAILS BUTTON */
 .btn {
   display: flex;
-  justify-content: center; /* Centers the button */
+  justify-content: center;
   width: 100%;
 }
 
@@ -198,7 +198,7 @@ main {
 
 /* FOOTER */
 footer {
-  background-color: #0f2e46; /* Professional Navy */
+  background-color: #134b85;
   margin-top: auto;
   padding: 60px 0;
 }

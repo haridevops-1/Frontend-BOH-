@@ -7,21 +7,20 @@
 }
 
 body {
-  background-color: #f0f2f5; /* Clean Dashboard Grey */
+  background-color: #f0f2f5; 
   font-family: "Poppins", sans-serif;
   color: #333;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures footer stays at bottom */
+  min-height: 100vh; 
 }
 
 /* HEADER */
 header {
-  background: linear-gradient(90deg, #185a9d 0%, #12467d 100%);
-  height: 70px;
+  background: #134b85;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Fixes alignment automatically */
+  justify-content: space-between; 
   padding: 0 50px;
   position: sticky;
   top: 0;
@@ -96,25 +95,25 @@ header {
   margin: 20px auto 50px;
   padding: 0 20px;
   width: 100%;
-  flex: 1; /* Pushes footer down */
+  flex: 1; 
 }
 
 .card {
   background: #ffffff;
-  padding: 0; /* Remove padding so table hits the edges */
+  padding: 0; 
   border-radius: 12px;
   /* Professional Shadow */
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   border: 1px solid #e2e8f0;
-  overflow: hidden; /* Clips the corners */
+  overflow: hidden; 
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  white-space: nowrap; /* Prevents wrapping */
+  white-space: nowrap; 
 }
 
 th {
@@ -164,17 +163,17 @@ tbody tr:last-child td {
 
 .pending {
   /* Used for 'completed' in your HTML */
-  background: #e0f2fe; /* Light Blue */
+  background: #e0f2fe; 
   color: #0369a1;
 }
 
 .accepted {
-  background: #dcfce7; /* Light Green */
+  background: #dcfce7; 
   color: #166534;
 }
 
 .rejected {
-  background: #fee2e2; /* Light Red */
+  background: #fee2e2; 
   color: #991b1b;
 }
 
@@ -203,7 +202,7 @@ tbody tr:last-child td {
 
 /* FOOTER */
 footer {
-  background-color: #0f2e46; /* Professional Navy */
+  background-color: #134b85;
   padding: 60px 0;
   margin-top: auto;
 }

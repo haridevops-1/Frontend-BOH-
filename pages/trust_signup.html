@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
-    <link rel="stylesheet" href="../styles/trust_signup.css" />
+    <link rel="stylesheet" href="../styles/trust_signup.css">
   </head>
 
   <body>
@@ -15,77 +15,93 @@
       </div>
 
       <form class="auth-form" action="/api/auth/signup" method="POST">
-        <!-- trust Name -->
-        <label>trust name</label>
-        <input
-          type="text"
-          name="trust name"
-          placeholder="Enter your trust name"
-          required
-        />
-        <!-- trust Address Name -->
-        <label>trust Address</label>
-        <input
-          type="text"
-          name="trust address"
-          placeholder="Enter your trust address"
-          required
-        />
+        <div>
+          <label>Trust Name</label>
+          <input
+            type="text"
+            name="trust name"
+            placeholder="Enter your trust name"
+            required
+          />
+        </div>
 
-        <!-- Mobile Number -->
-        <label>Mobile Number</label>
-        <input
-          type="tel"
-          name="mobile_number"
-          placeholder="Enter your Mobile Number"
-          required
-        />
+        <div>
+          <label>Trust Address</label>
+          <input
+            type="text"
+            name="trust address"
+            placeholder="Enter your trust address"
+            required
+          />
+        </div>
 
-        <!-- Email -->
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-        />
+        <div>
+          <label>Mobile Number</label>
+          <input
+            type="tel"
+            name="mobile_number"
+            placeholder="Enter your Mobile Number"
+            required
+          />
+        </div>
 
-        <!-- Password -->
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter your password"
-          required
-        />
+        <div>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
 
-        <!--  Username -->
-        <label> Username</label>
-        <input
-          type="text"
-          name="Username"
-          placeholder="Enter your Username"
-          required
-        />
+        <div>
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
 
-        <!-- City -->
-        <label>City</label>
-        <input type="text" name="city" placeholder="Enter your city" required />
-        <!-- Pincode -->
-        <label>Pincode</label>
-        <input
-          type="text"
-          name="city"
-          placeholder="Enter your pincode"
-          required
-        />
+        <div>
+          <label>Username</label>
+          <input
+            type="text"
+            name="Username"
+            placeholder="Enter your Username"
+            required
+          />
+        </div>
+
+        <div>
+          <label>City</label>
+          <input
+            type="text"
+            name="city"
+            placeholder="Enter your city"
+            required
+          />
+        </div>
+
+        <div>
+          <label>Pincode</label>
+          <input
+            type="text"
+            name="pincode"
+            placeholder="Enter your pincode"
+            required
+          />
+        </div>
+
         <div class="buttons">
           <button type="submit">Signup</button>
         </div>
 
         <p class="auth-links">
           Already have an account?
-          <a href="../login.html">Login</a>
+          <a href="../pages/login.html">Login</a>
         </p>
       </form>
     </div>
