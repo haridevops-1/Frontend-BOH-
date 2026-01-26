@@ -7,18 +7,18 @@
 }
 
 body {
-  background: #f0f2f5; /* Clean Dashboard Grey */
+  background: #f0f2f5;
   font-family: "Poppins", sans-serif;
   color: #333;
 }
 
 /* HEADER - Fixed Alignment */
 header {
-  background: linear-gradient(90deg, #185a9d 0%, #12467d 100%);
+  background: #134b85;
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Pushes Logo left, Nav right */
+  justify-content: space-between; 
   padding: 0 60px;
   position: sticky;
   top: 0;
@@ -55,12 +55,12 @@ header {
 
 /* MAIN LAYOUT */
 main {
-  max-width: 1000px; /* Constrained width for readability */
+  max-width: 1000px; 
   margin: 50px auto;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 25px; /* Spacing between the 3 containers */
+  gap: 25px; 
 }
 
 /* HEADINGS */
@@ -88,7 +88,7 @@ main {
 
 .main-field {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 Columns */
+  grid-template-columns: 1fr 1fr; 
   column-gap: 50px;
   row-gap: 25px;
 }
@@ -101,15 +101,15 @@ main {
 }
 
 .main-field strong {
-  color: #7f8c8d; /* Muted label */
+  color: #7f8c8d; 
   font-weight: 500;
-  display: block; /* Label on top for grid layout looks better */
+  display: block; 
   font-size: 12px;
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 
-/* CONTAINER 2: IMAGE UPLOAD (Refined) */
+/* CONTAINER 2: */
 .image-proof {
   background: #fff;
   padding: 40px;
@@ -124,7 +124,7 @@ main {
   gap: 30px;
 }
 
-/* Modern "Drop Zone" Style */
+/* Image-proof */
 .upload-box {
   height: 150px;
   width: 100%;
@@ -153,7 +153,7 @@ main {
   width: auto;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
-  display: none; /* Hidden until JS shows it (logic separate) */
+  display: none; 
 }
 
 /* CONTAINER 3: STATUS UPDATE */
@@ -226,7 +226,7 @@ select:focus {
 
 /* FOOTER */
 .footer {
-  background-color: #0f2e46;
+  background-color: #134b85;
   width: 100%;
   height: 250px;
   display: flex;
@@ -262,7 +262,7 @@ select:focus {
 }
 
 .set-2 a:hover {
-  color: goldenrod;
+  color: #fff;
   padding-left: 5px;
 }
 

@@ -7,23 +7,22 @@
 }
 
 body {
-  background-color: #f0f2f5; /* Slightly cleaner grey */
+  background-color: #f0f2f5;
   font-family: "Poppins", sans-serif;
   color: #333;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures footer stays at bottom */
+  min-height: 100vh;
 }
 
 /* HEADER - Fixed Layout */
 header {
-  background-color: #185a9d; /* Gradient for pro feel */
+  background-color: #185a9d;
   background: linear-gradient(90deg, #185a9d 0%, #12467d 100%);
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Pushes Logo left, Nav right automatically */
-  padding: 0 50px;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -34,7 +33,6 @@ header {
   color: #fff;
   font-size: 24px;
   font-weight: 700;
-  /* Removed large margins to allow flexbox to handle spacing */
 }
 
 .logo a {
@@ -65,7 +63,7 @@ header {
   max-width: 1000px;
   margin: 50px auto;
   padding: 0 20px;
-  flex: 1; /* Pushes footer down */
+  flex: 1;
   width: 100%;
 }
 
@@ -87,7 +85,6 @@ header {
   background: #fff;
   border-radius: 16px;
   padding: 50px;
-  /* Professional Soft Shadow */
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -115,7 +112,7 @@ header {
   font-weight: 600;
   color: #185a9d;
   border: 4px solid #fff;
-  box-shadow: 0 0 0 2px #e2e8f0; /* Ring effect */
+  box-shadow: 0 0 0 2px #e2e8f0;
 }
 
 .trust-info h2 {
@@ -165,7 +162,7 @@ header {
   font-size: 15px;
   color: #333;
   font-weight: 600;
-  word-break: break-word; /* Prevents long emails from breaking layout */
+  word-break: break-word;
 }
 
 /* STATUS PILL */
@@ -202,11 +199,11 @@ header {
   box-shadow: 0 6px 12px rgba(24, 90, 157, 0.3);
 }
 
-/* FOOTER - Moved outside container for full width */
+/* FOOTER -  */
 footer {
-  background-color: #0f2e46; /* Dark Navy */
+  background-color: #134b85;
   width: 100%;
-  margin-top: auto; /* Pushes to bottom */
+  margin-top: auto;
   padding: 60px 0;
 }
 
@@ -246,7 +243,7 @@ footer {
 }
 
 .set-2 a:hover {
-  color: goldenrod;
+  color: #fff;
   padding-left: 5px;
 }
 

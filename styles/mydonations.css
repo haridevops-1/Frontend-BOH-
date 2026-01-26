@@ -1,5 +1,7 @@
+/* IMPORT FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
+/* RESET & BASE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -7,20 +9,21 @@
 }
 
 body {
-  background-color: #f0f2f5; 
-  font-family: "Poppins", sans-serif;
+  background-color: #f0f2f5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #333;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 /* HEADER */
 header {
   background: #134b85;
+  height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 0 50px;
   position: sticky;
   top: 0;
@@ -54,8 +57,8 @@ header {
 
 .nav-links a:hover {
   color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
-
 /* BREADCRUMB */
 .back-button {
   max-width: 1100px;
@@ -253,12 +256,3 @@ footer {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Responsive Table */
-@media (max-width: 768px) {
-  .container {
-    overflow-x: auto;
-  }
-  table {
-    min-width: 600px;
-  }
-}

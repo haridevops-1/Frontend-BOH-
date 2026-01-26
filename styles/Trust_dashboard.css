@@ -16,7 +16,7 @@ body {
 
 /* HEADER */
 header {
-  background: linear-gradient(90deg, #185a9d 0%, #12467d 100%);
+  background: #134b85;
   height: 70px;
   display: flex;
   align-items: center;
@@ -131,10 +131,10 @@ main {
 
 /* Specific Top Border Colors */
 .field-pending {
-  border-top: 4px solid #f59e0b;
+  border-top: 4px solid #d68e11;
 }
 .field-accepted {
-  border-top: 4px solid #10b981;
+  border-top: 4px solid #0f684b;
 }
 .field-rejected {
   border-top: 4px solid #ef4444;
@@ -165,7 +165,7 @@ main {
 .pending-button a {
   display: block;
   padding: 12px;
-  background-color: #f59e0b; /* Orange */
+  background-color: #d68e11;
   border-radius: 8px;
   color: #fff;
   text-align: center;
@@ -185,7 +185,7 @@ main {
 .accepted-button a {
   display: block;
   padding: 12px;
-  background-color: #10b981; /* Green */
+  background-color: #0f684b; 
   border-radius: 8px;
   color: #fff;
   text-align: center;
@@ -205,7 +205,7 @@ main {
 .rejected-button a {
   display: block;
   padding: 12px;
-  background-color: #ef4444; /* Red */
+  background-color: #c23232; 
   border-radius: 8px;
   color: #fff;
   text-align: center;
@@ -313,9 +313,9 @@ main {
   border: 1px solid #dbeafe;
 }
 
-/* FOOTER - FIXED */
+/* FOOTER  */
 footer {
-  background-color: #0f2e46; /* Navy background on the main tag */
+  background-color: #134b85; 
   width: 100%;
   margin-top: auto;
   padding: 60px 0;
@@ -358,7 +358,7 @@ footer {
 }
 
 .set-2 a:hover {
-  color: #ffd700;
+  color: #fff;
   padding-left: 5px;
 }
 
@@ -369,7 +369,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .main-field {
     grid-template-columns: 1fr 1fr;
   }
@@ -384,4 +384,4 @@ footer {
     align-items: center;
     text-align: center;
   }
-}
+} */
