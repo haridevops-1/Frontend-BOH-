@@ -1,177 +1,407 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bridge Of Hope</title>
-    <link
-      rel="stylesheet"
-      href="./index.css"
-    />
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bridge Of Hope</title>
 
-  <body>
-    <header>
-      <div class="logo">
-        <h1>BridgeOfHope</h1>
-      </div>
-      <nav class="nav-links">
-        <a href="./pages/about.html">About</a>
-        <a href="./pages/login.html">Login</a>
-      </nav>
-    </header>
-<!-- Main -->
-    <main>
-      <section class="top">
-        <div class="overlay"></div>
-        <div class="hero-text">
-          <h1>
-            A meal shared is a <br />
-            <span>smile shared</span>
-          </h1>
-          <p>Turning surplus food into hope and happiness for those in need.</p>
-        </div>
-      </section>
-<!-- About  -->
-      <div class="about">
-        <section class="why">
-          <div class="line"></div>
-          <h2>Why BridgeOfHope</h2>
-          <div class="accordion">
-            <details open>
-              <summary>Stop Food Waste</summary>
-              <p>
-                Turn your surplus food into valuable meals instead of
-                <br />letting it go to waste.
-              </p>
-            </details>
-            <details>
-              <summary>Bridge the Gap</summary>
-              <p>
-                Be the direct link between your extra food and <br />a hungry
-                person's empty plate.
-              </p>
-            </details>
-            <details>
-              <summary>Feed with Dignity</summary>
-              <p>
-                Ensure your food is served with care and respect <br />to those
-                who truly need it.
-              </p>
-            </details>
-            <details>
-              <summary>Total Transparency</summary>
-              <p>
-                Track your donation’s journey from your doorstep <br />to the
-                moment it is served.
-              </p>
-            </details>
-          </div>
-        </section>
-<!-- How Section -->
-        <section class="how">
-          <div class="line"></div>
-          <h2>How It Works</h2>
-          <div class="accordion">
-            <details open>
-              <summary>List Your Donation</summary>
-              <p>
-                Simply enter the food details and location; <br />it takes just
-                a minute to share.
-              </p>
-            </details>
-            <details>
-              <summary>Trusts Respond</summary>
-              <p>
-                Verified local trusts receive your alert and <br />accept the
-                donation request instantly.
-              </p>
-            </details>
-            <details>
-              <summary>Pickup & Serve</summary>
-              <p>
-                The trust collects the food safely and serves <br />it to people
-                while it is fresh.
-              </p>
-            </details>
-            <details>
-              <summary>See the Impact</summary>
-              <p>
-                Receive status updates and photo proof confirming <br />your
-                food brought a smile.
-              </p>
-            </details>
-          </div>
-        </section>
-      </div>
-<!-- Join for Both Donor and Trusts -->
-      <section class="join-us">
-        <h2>Join the Movement</h2>
-        <div class="join-cards">
-          <div class="join-card">
-            <h3>For Donors</h3>
-            <p>Have surplus food from an event or home? Share it now.</p>
-            <a href="./pages/signup.html" class="join-btn">Donate Food</a>
-          </div>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-          <div class="join-card">
-            <h3>For Trusts</h3>
-            <p>Running a shelter or orphanage? Connect with donors.</p>
-            <a href="./pages/trust_signup.html" class="join-btn"
-              >Receive Food</a
-            >
-          </div>
-        </div>
-      </section>
-<!-- Review Section -->
-      <section class="testimonials">
-        <h2>Stories of Hope</h2>
-        <div class="review-grid">
-          <div class="review-card">
-            <p>
-              "It used to be so hard to find where to give our extra wedding
-              food. BridgeOfHope made it instant and hassle-free."
-            </p>
-            <div class="reviewer">
-              <strong>- Rajesh</strong>
-              <span>Event Planner</span>
-            </div>
-          </div>
-          <div class="review-card">
-            <p>
-              "The tracking feature helps us prepare to receive food on time. It
-              is a blessing for the 50 kids we support."
-            </p>
-            <div class="reviewer">
-              <strong>- Helping Hands Trust</strong>
-              <span>Chennai</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-<!-- Footer -->
-    <footer>
-      <div class="footer">
-        <div class="set">
-          <h3>Bridge Of Hope</h3>
-          <p>Bridging Hearts, Filling Plates.</p>
-        </div>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        <div class="set">
-          <h3>Quick Links</h3>
-          <a href="#">About</a>
-          <a href="./signup.html">Signup</a>
-          <a href="./login.html">Login</a>
-        </div>
+body{
+font-family:"Poppins",sans-serif;
+background-color:#f4f6f8;
+color:#333;
+}
 
-        <div class="set">
-          <h3>Contact</h3>
-          <p>Chennai, India</p>
-          <p>+044 2445334</p>
-          <p>bridgeofhope@gmail.com</p>
-        </div>
-      </div>
-    </footer>
-  </body>
+/* --- HEADER --- */
+header{
+background:linear-gradient(90deg,#185a9d 0%,#12467d 100%);
+height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 50px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo h1{
+color:white;
+font-size:24px;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+}
+
+/* HERO */
+.top{
+position:relative;
+height:500px;
+margin:20px;
+border-radius:20px;
+background:url("./assets/front-view-box-being-prepared-with-food-donation.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+padding-left:80px;
+overflow:hidden;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(to right,rgba(0,0,0,.8),rgba(0,0,0,.2));
+border-radius:20px;
+}
+
+.hero-text{
+position:relative;
+color:white;
+max-width:600px;
+z-index:2;
+}
+
+.hero-text h1{
+font-size:52px;
+}
+
+.hero-text span{
+color:#ffcc00;
+}
+
+/* ========================= */
+/* WHY & HOW FIXED ALIGNMENT */
+/* ========================= */
+
+.about{
+display:flex;
+flex-direction:column;
+gap:100px;
+padding:40px 20px;
+max-width:1100px;
+margin:40px auto;
+}
+
+/* WHY */
+.why-block{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.why-image{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.why-image img{
+width:100%;
+max-width:420px;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+/* HOW */
+.how-block{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.how-image{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.how-image img{
+width:100%;
+max-width:420px;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.line{
+width:60px;
+height:4px;
+background:#ffcc00;
+margin-bottom:20px;
+border-radius:3px;
+}
+
+h2{
+font-size:28px;
+margin-bottom:25px;
+color:#185a9d;
+font-weight:700;
+}
+
+/* accordion */
+.accordion{
+background:#fff;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+border:1px solid #eee;
+overflow:hidden;
+max-width:420px;
+}
+
+details{
+border-bottom:1px solid #eee;
+padding:15px 20px;
+}
+
+details:last-child{
+border-bottom:none;
+}
+
+summary{
+display:flex;
+justify-content:space-between;
+font-weight:600;
+cursor:pointer;
+}
+
+summary::after{
+content:"+";
+}
+
+details[open] summary::after{
+content:"×";
+}
+
+details p{
+margin-top:10px;
+color:#666;
+font-size:14px;
+}
+
+/* JOIN */
+.join-us{
+text-align:center;
+padding:60px 20px;
+background:#fff;
+margin-top:40px;
+}
+
+.join-cards{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.join-card{
+background:#f4f6f8;
+padding:40px;
+border-radius:16px;
+width:300px;
+}
+
+.join-btn{
+display:inline-block;
+padding:12px 30px;
+background:#185a9d;
+color:white;
+text-decoration:none;
+border-radius:30px;
+margin-top:15px;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+padding:60px 20px;
+text-align:center;
+}
+
+.review-grid{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.review-card{
+background:#fff;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+max-width:400px;
+border-left:4px solid #ffcc00;
+}
+
+/* FOOTER */
+footer{
+background-color:#134b85;
+padding:60px 0;
+margin-top:50px;
+}
+
+.footer{
+max-width:1200px;
+margin:0 auto;
+display:flex;
+justify-content:space-evenly;
+color:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<h1>BridgeOfHope</h1>
+</div>
+<nav class="nav-links">
+<a href="#">About</a>
+<a href="#">Login</a>
+</nav>
+</header>
+
+<main>
+<section class="top">
+<div class="overlay"></div>
+<div class="hero-text">
+<h1>A meal shared is a <br><span>smile shared</span></h1>
+<p>Turning surplus food into hope and happiness for those in need.</p>
+</div>
+</section>
+
+<div class="about">
+
+<section class="why-block">
+<div class="why-image">
+<img src="./assets/smiley-volunteers-with-gloves-handing-boxes-with-food-donation.jpg">
+</div>
+
+<section class="why">
+<div class="line"></div>
+<h2>Why BridgeOfHope</h2>
+
+<div class="accordion">
+<details open>
+<summary>Stop Food Waste</summary>
+<p>Turn your surplus food into valuable meals instead of letting it go to waste.</p>
+</details>
+
+<details>
+<summary>Bridge the Gap</summary>
+<p>Be the direct link between your extra food and a hungry person's empty plate.</p>
+</details>
+
+<details>
+<summary>Feed with Dignity</summary>
+<p>Ensure your food is served with care and respect.</p>
+</details>
+
+<details>
+<summary>Total Transparency</summary>
+<p>Track your donation journey.</p>
+</details>
+</div>
+</section>
+</section>
+
+<section class="how-block">
+<section class="how">
+<div class="line"></div>
+<h2>How It Works</h2>
+
+<div class="accordion">
+<details open>
+<summary>List Your Donation</summary>
+<p>Enter food details and location.</p>
+</details>
+
+<details>
+<summary>Trusts Respond</summary>
+<p>Nearby trusts accept instantly.</p>
+</details>
+
+<details>
+<summary>Pickup & Serve</summary>
+<p>Food collected safely.</p>
+</details>
+
+<details>
+<summary>See the Impact</summary>
+<p>Get confirmation.</p>
+</details>
+</div>
+</section>
+
+<div class="how-image">
+<img src="./assets/food-donation-box-being-prepared-by-volunteers.jpg">
+</div>
+</section>
+
+</div>
+
+<section class="join-us">
+<h2>Join the Movement</h2>
+<div class="join-cards">
+<div class="join-card">
+<h3>For Donors</h3>
+<p>Have surplus food from an event or home? Share it now.</p>
+<a href="./pages/signup.html" class="join-btn">Donate Food</a>
+</div>
+
+<div class="join-card">
+<h3>For Trusts</h3>
+<p>Running a shelter or orphanage? Connect with donors.</p>
+<a href="./pages/trust_signup.html" class="join-btn">Receive Food</a>
+</div>
+</div>
+</section>
+
+<section class="testimonials">
+<h2>Stories of Hope</h2>
+<div class="review-grid">
+<div class="review-card">
+<p>"BridgeOfHope made it instant and hassle-free."</p>
+</div>
+<div class="review-card">
+<p>"A blessing for the 50 kids we support."</p>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="footer">
+<div class="set">
+<h3>Bridge Of Hope</h3>
+<p>Bridging Hearts, Filling Plates.</p>
+</div>
+</div>
+</footer>
+
+</body>
 </html>

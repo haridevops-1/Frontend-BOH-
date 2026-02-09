@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Trust Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f6f8;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* HEADER (Same as Dashboard) */
+      header {
+        background: linear-gradient(90deg, #185a9d 0%, #12467d 100%);
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo h1 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      
+      .logo a { text-decoration: none; }
+
+      .nav-links {
+        display: flex;
+        gap: 35px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #fff;
+      }
+
+      /* MAIN CONTENT */
+      main {
+        flex: 1;
+        max-width: 1000px;
+        margin: 40px auto;
+        width: 100%;
+        padding: 0 20px;
+      }
+
+      /* BREADCRUMB */
+      .breadcrumb {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #64748b;
+      }
+      .breadcrumb a { text-decoration: none; color: #185a9d; font-weight: 600; }
+
+      /* VERIFICATION CARD */
+      .verify-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        overflow: hidden;
+        border: 1px solid #eef0f2;
+      }
+
+      /* LEFT SIDE - DETAILS */
+      .details-section {
+        padding: 40px;
+        border-right: 1px solid #f0f2f5;
+      }
+
+      .details-section h2 {
+        color: #185a9d;
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      .reg-badge {
+        background-color: #fff7ed;
+        color: #c2410c;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 20px;
+        border: 1px solid #ffedd5;
+      }
+
+      .info-row {
+        margin-bottom: 20px;
+      }
+
+      .info-row label {
+        display: block;
+        font-size: 12px;
+        color: #64748b;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+      .info-row p {
+        font-size: 16px;
+        color: #333;
+        font-weight: 500;
+      }
+
+      /* RIGHT SIDE - DOCUMENT PROOF */
+      .document-section {
+        padding: 40px;
+        background-color: #f8fafc;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .document-section h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: #334155;
+      }
+
+      .doc-preview {
+        width: 100%;
+        height: 300px;
+        background-color: #e2e8f0;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #64748b;
+        border: 2px dashed #cbd5e1;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .doc-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ACTION BUTTONS */
+      .action-area {
+        margin-top: auto;
+        padding-top: 30px;
+      }
+
+      .reason-box {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-family: "Poppins";
+        font-size: 14px;
+        margin-bottom: 15px;
+        resize: none;
+        display: none; /* Hidden by default */
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        border: none;
+        transition: 0.3s;
+      }
+
+      .btn-accept {
+        background-color: #10B981;
+        color: white;
+      }
+      .btn-accept:hover { background-color: #059669; }
+
+      .btn-reject {
+        background-color: #EF4444;
+        color: white;
+      }
+      .btn-reject:hover { background-color: #dc2626; }
+
+      /* FOOTER (Same as others) */
+      footer {
+        background-color: #0f2e46;
+        padding: 60px 0;
+        margin-top: auto;
+      }
+
+      .footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        color: white;
+        padding: 0 20px;
+      }
+      
+      .set-2 { display: flex; flex-direction: column; }
+      .set-2 h3, .set-3 h3 { font-size: 18px; margin-bottom: 20px; color: #fff; }
+      .set-1 p { opacity: 0.8; font-size: 14px; margin-top: 10px; }
+      .set-2 a { text-decoration: none; color: rgba(255,255,255,0.7); margin-top: 10px; font-size: 14px; }
+      .set-2 a:hover { color: #F59E0B; }
+      .set-3 p { margin-top: 10px; font-size: 14px; color: rgba(255,255,255,0.8); }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .verify-container { grid-template-columns: 1fr; }
+        .details-section { border-right: none; border-bottom: 1px solid #f0f2f5; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"><h1>BridgeOfHope</h1></a>
+      </div>
+      <nav class="nav-links">
+        <a href="admin_dashboard.html">Dashboard</a>
+        <a href="#">Trusts List</a>
+        <a href="#">Donors List</a>
+        <a href="#">Log out</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb">
+        <a href="admin_dashboard.html">Dashboard</a> / <span>Verify Trust</span>
+      </div>
+
+      <div class="verify-container">
+        <div class="details-section">
+          <h2>Sunrise Orphanage</h2>
+          <span class="reg-badge">Registration Pending</span>
+
+          <div class="info-row">
+            <label>Government Reg. Number</label>
+            <p>TN-CHE-2023-8821</p>
+          </div>
+
+          <div class="info-row">
+            <label>Trust Address</label>
+            <p>No. 45, Gandhi Road, Velachery, Chennai - 600042</p>
+          </div>
+
+          <div class="info-row">
+            <label>Contact Person</label>
+            <p>Mr. S. Ravi Kumar (Founder)</p>
+          </div>
+
+          <div class="info-row">
+            <label>Mobile Number</label>
+            <p>+91 98765 43210</p>
+          </div>
+
+          <div class="info-row">
+            <label>Email ID</label>
+            <p>admin@sunriseorphanage.org</p>
+          </div>
+        </div>
+
+        <div class="document-section">
+          <h3>Uploaded Document (Trust Deed / ID)</h3>
+          
+          <div class="doc-preview">
+            <img src="../assets/certificate-placeholder.jpg" alt="Trust Certificate" />
+            </div>
+
+          <div class="action-area">
+            <textarea class="reason-box" placeholder="Enter reason for rejection..."></textarea>
+            
+            <div class="btn-group">
+              <button class="btn btn-reject" onclick="toggleReason()">Reject</button>
+              <button class="btn btn-accept">Verify & Approve</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="set-1">
+          <h3>BridgeOfHope</h3>
+          <p>Bridging Hearts, Filling Plates.</p>
+        </div>
+
+        <div class="set-2">
+          <h3>Quick Links</h3>
+          <a href="#">Dashboard</a>
+          <a href="#">Trust Verification</a>
+          <a href="#">Manage Users</a>
+          <a href="#">Log out</a>
+        </div>
+
+        <div class="set-3">
+          <h3>Contact Information</h3>
+          <p>
+            18 Global Infocity Park,<br />
+            Perugudi, Chennai-600113
+          </p>
+          <p>+044 2445334</p>
+          <p>bridgeofhope@gmail.com</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleReason() {
+        const box = document.querySelector('.reason-box');
+        if (box.style.display === 'block') {
+          // If already visible, assume user is submitting rejection
+          alert("Trust Rejected. Notification sent to user.");
+        } else {
+          // Show the box to type reason
+          box.style.display = 'block';
+          box.focus();
+        }
+      }
+
+      document.querySelector('.btn-accept').addEventListener('click', function() {
+        alert("Trust Verified Successfully! Moving to Dashboard.");
+        window.location.href = 'admin_dashboard.html';
+      });
+    </script>
+  </body>
+</html>

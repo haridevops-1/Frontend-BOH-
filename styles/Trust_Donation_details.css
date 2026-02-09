@@ -94,7 +94,7 @@ header {
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   border: 1px solid #eaecf0;
-  border-left: 6px solid #185a9d;
+  /* border-left: 6px solid #185a9d; */
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;

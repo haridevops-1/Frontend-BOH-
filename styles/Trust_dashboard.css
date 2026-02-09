@@ -130,7 +130,7 @@ main {
 }
 
 /* Specific Top Border Colors */
-.field-pending {
+/* .field-pending {
   border-top: 4px solid #d68e11;
 }
 .field-accepted {
@@ -138,7 +138,7 @@ main {
 }
 .field-rejected {
   border-top: 4px solid #ef4444;
-}
+} */
 
 /* Text Colors */
 .field-pending p {
@@ -185,7 +185,7 @@ main {
 .accepted-button a {
   display: block;
   padding: 12px;
-  background-color: #0f684b; 
+  background-color: #0f684b;
   border-radius: 8px;
   color: #fff;
   text-align: center;
@@ -205,7 +205,7 @@ main {
 .rejected-button a {
   display: block;
   padding: 12px;
-  background-color: #c23232; 
+  background-color: #c23232;
   border-radius: 8px;
   color: #fff;
   text-align: center;
@@ -315,7 +315,7 @@ main {
 
 /* FOOTER  */
 footer {
-  background-color: #134b85; 
+  background-color: #134b85;
   width: 100%;
   margin-top: auto;
   padding: 60px 0;
@@ -368,20 +368,3 @@ footer {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Responsive */
-/* @media (max-width: 900px) {
-  .main-field {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .main-field {
-    grid-template-columns: 1fr;
-  }
-  .footer {
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    text-align: center;
-  }
-} */

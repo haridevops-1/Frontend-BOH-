@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f6f8;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* HEADER */
+      header {
+        background: linear-gradient(90deg, #185a9d 0%, #12467d 100%);
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo h1 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      
+      .logo a { text-decoration: none; }
+
+      .nav-links {
+        display: flex;
+        gap: 35px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #fff;
+      }
+
+      /* MAIN CONTAINER */
+      main {
+        flex: 1;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px 60px;
+      }
+
+      /* HEADINGS */
+      .top-headings {
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+
+      .top-headings h3 {
+        color: #185a9d;
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      .top-headings p {
+        color: #64748b;
+        font-size: 15px;
+        margin-top: 5px;
+      }
+
+      /* STATS CARDS (Using your style .main-field) */
+      .main-field {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .field-1, .field-2, .field-3 {
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border: 1px solid #eef0f2;
+        transition: transform 0.3s;
+        text-align: center;
+      }
+
+      .field-1:hover, .field-2:hover, .field-3:hover {
+        transform: translateY(-5px);
+      }
+
+      .field-1 { border-top: 4px solid #F59E0B; } /* Pending - Orange */
+      .field-2 { border-top: 4px solid #10B981; } /* Verified - Green */
+      .field-3 { border-top: 4px solid #185a9d; } /* Total - Blue */
+
+      .main-field h3 {
+        font-size: 16px;
+        color: #64748b;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      .main-field p {
+        font-size: 42px;
+        font-weight: 700;
+        color: #333;
+      }
+
+      /* VERIFICATION TABLE SECTION */
+      .verification-section h3 {
+        margin-bottom: 20px;
+        color: #185a9d;
+        font-size: 22px;
+      }
+
+      .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      }
+
+      .admin-table thead {
+        background-color: #f1f5f9;
+      }
+
+      .admin-table th, .admin-table td {
+        padding: 18px 25px;
+        text-align: left;
+        font-size: 14px;
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      .admin-table th {
+        color: #64748b;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+
+      .admin-table td {
+        color: #334155;
+      }
+
+      /* ACTION BUTTONS IN TABLE */
+      .action-buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn-approve, .btn-reject, .btn-view {
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: 0.3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-approve {
+        background-color: #d1fae5;
+        color: #065f46;
+      }
+      .btn-approve:hover { background-color: #10B981; color: white; }
+
+      .btn-reject {
+        background-color: #fee2e2;
+        color: #991b1b;
+      }
+      .btn-reject:hover { background-color: #EF4444; color: white; }
+      
+      .btn-view {
+        background-color: #eff6ff;
+        color: #1e40af;
+      }
+      .btn-view:hover { background-color: #185a9d; color: white; }
+
+      /* FOOTER */
+      footer {
+        background-color: #0f2e46;
+        padding: 60px 0;
+        margin-top: auto;
+      }
+
+      .footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        color: white;
+        padding: 0 20px;
+      }
+
+      .set-1 p { opacity: 0.8; font-size: 14px; margin-top: 10px; }
+      
+      .set-2 { display: flex; flex-direction: column; }
+      .set-2 h3, .set-3 h3 { font-size: 18px; margin-bottom: 20px; color: #fff; }
+
+      .set-2 a {
+        text-decoration: none;
+        color: rgba(255,255,255,0.7);
+        margin-top: 10px;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+      .set-2 a:hover { color: #F59E0B; padding-left: 5px; }
+
+      .set-3 p { margin-top: 10px; font-size: 14px; color: rgba(255,255,255,0.8); }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"><h1>BridgeOfHope</h1></a>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Dashboard</a>
+        <a href="#">Trusts List</a>
+        <a href="#">Donors List</a>
+        <a href="#">Log out</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+        <div class="top-headings">
+          <h3>Welcome, Admin</h3>
+          <p>Verify new trust registrations to ensure safety and transparency.</p>
+        </div>
+
+        <div class="main-field">
+          <div class="field-1">
+            <h3>Pending Verification</h3>
+            <p>04</p>
+          </div>
+          <div class="field-2">
+            <h3>Verified Trusts</h3>
+            <p>25</p>
+          </div>
+          <div class="field-3">
+            <h3>Total Trusts</h3>
+            <p>29</p>
+          </div>
+        </div>
+
+        <section class="verification-section">
+          <h3>New Trust Registrations</h3>
+
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Trust Name</th>
+                <th>Reg. No</th>
+                <th>Location</th>
+                <th>Document</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sunrise Orphanage</td>
+                <td>REG-8821</td>
+                <td>Velachery, Chennai</td>
+                <td><a href="#" class="btn-view">View ID</a></td>
+                <td style="color: orange; font-weight: 600;">Pending</td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-approve">Approve</button>
+                    <button class="btn-reject">Reject</button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Happy Elders Home</td>
+                <td>REG-9902</td>
+                <td>Adyar, Chennai</td>
+                <td><a href="#" class="btn-view">View ID</a></td>
+                <td style="color: orange; font-weight: 600;">Pending</td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-approve">Approve</button>
+                    <button class="btn-reject">Reject</button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Safe Haven Shelter</td>
+                <td>REG-1104</td>
+                <td>T-Nagar, Chennai</td>
+                <td><a href="#" class="btn-view">View ID</a></td>
+                <td style="color: orange; font-weight: 600;">Pending</td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-approve">Approve</button>
+                    <button class="btn-reject">Reject</button>
+                  </div>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>Community Kitchen</td>
+                <td>REG-3321</td>
+                <td>Tambaram, Chennai</td>
+                <td><a href="#" class="btn-view">View ID</a></td>
+                <td style="color: orange; font-weight: 600;">Pending</td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-approve">Approve</button>
+                    <button class="btn-reject">Reject</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="set-1">
+          <h3>BridgeOfHope</h3>
+          <p>Bridging Hearts, Filling Plates.</p>
+        </div>
+
+        <div class="set-2">
+          <h3>Quick Links</h3>
+          <a href="#">Dashboard</a>
+          <a href="#">Trust Verification</a>
+          <a href="#">Manage Users</a>
+          <a href="#">Log out</a>
+        </div>
+
+        <div class="set-3">
+          <h3>Contact Information</h3>
+          <p>
+            18 Global Infocity Park,<br />
+            Perugudi, Chennai-600113
+          </p>
+          <p>+044 2445334</p>
+          <p>bridgeofhope@gmail.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

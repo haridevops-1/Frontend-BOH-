@@ -30,12 +30,8 @@ header {
   color: white;
   font-size: 24px;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
-.logo h1:hover {
-  color: #ffcc00;
-  transition: 0.3s;
-}
+
 .nav-links {
   display: flex;
   gap: 35px;
@@ -43,124 +39,88 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 500;
-  font-size: 15px;
-  transition: 0.3s;
+  color: white;
 }
 
-.nav-links a:hover {
-  color: #fff;
-}
-
-/* --- HERO SECTION --- */
+/* HERO */
 .top {
   position: relative;
   height: 550px;
   margin: 20px;
   border-radius: 20px;
-  background:
-    url("./assets/hand-img-poster-img.jpg") center/cover no-repeat,
-    #185a9d;
+  background: url("./assets/front-view-box-being-prepared-with-food-donation.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   padding-left: 80px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.top .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+  }
 
 .hero-text {
   position: relative;
   color: white;
   max-width: 600px;
-  z-index: 2;
-  animation: fadeIn 1s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .hero-text h1 {
   font-size: 52px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.2;
 }
 
 .hero-text span {
   color: #ffcc00;
 }
 
-.hero-text p {
-  font-size: 18px;
-  color: #e0e0e0;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-}
+/* ========================= */
+/* WHY & HOW NEW DESIGN */
+/* ========================= */
 
-/* --- NEW: IMPACT STATS SECTION --- */
-.impact-stats {
-  max-width: 1000px;
-  margin: -40px auto 40px auto; 
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  z-index: 10;
-  text-align: center;
-}
-
-.stat-box h3 {
-  font-size: 32px;
-  color: #185a9d;
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-
-.stat-box p {
-  color: #666;
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* --- WHY & HOW SECTION --- */
 .about {
   display: flex;
-  justify-content: center;
-  gap: 60px;
+  flex-direction: column;
+  gap: 100px;
   padding: 40px 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-.about section {
-  width: 48%;
-  max-width: 550px;
-  text-align: left;
+/* WHY */
+.why-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.why-image img {
+  width: 100%;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* HOW */
+.how-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.how-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.line {
+  width: 60px;
+  height: 4px;
+  background: #ffcc00;
+  margin-bottom: 20px;
+  border-radius: 3px;
 }
 
 h2 {
@@ -170,27 +130,18 @@ h2 {
   font-weight: 700;
 }
 
-.line {
-  width: 60px;
-  height: 4px;
-  background-color: #ffcc00;
-  margin-bottom: 20px;
-  border-radius: 2px;
-}
-
-/* Accordion */
+/* accordion card */
 .accordion {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid #eef0f2;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
   overflow: hidden;
 }
 
 details {
-  border-bottom: 1px solid #f0f0f0;
-  padding: 10px 20px;
-  transition: background-color 0.3s;
+  border-bottom: 1px solid #eee;
+  padding: 15px 20px;
 }
 
 details:last-child {
@@ -200,49 +151,29 @@ details:last-child {
 summary {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   font-weight: 600;
   cursor: pointer;
-  list-style: none;
-  font-size: 1.05rem;
-  color: #333;
-  padding: 10px 0;
-}
-
-summary:hover {
-  color: #185a9d;
-}
-
-summary::-webkit-details-marker {
-  display: none;
 }
 
 summary::after {
-  content: "❯";
-  font-size: 0.9rem;
-  color: #bbb;
-  transition: transform 0.3s ease;
-  transform: rotate(90deg);
+  content: "+";
 }
 
 details[open] summary::after {
-  transform: rotate(270deg);
-  color: #185a9d;
+  content: "×";
 }
 
 details p {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  line-height: 1.6;
+  margin-top: 10px;
   color: #666;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
-/* --- NEW: JOIN US SECTION --- */
+/* JOIN */
 .join-us {
   text-align: center;
   padding: 60px 20px;
-  background-color: #fff;
+  background: #fff;
   margin-top: 40px;
 }
 
@@ -259,55 +190,25 @@ details p {
   padding: 40px;
   border-radius: 16px;
   width: 300px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #eee;
-  transition: transform 0.3s;
+  transition: 0.3s ease;
 }
-
-.join-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.join-card:hover{
+  transform: translateX(20px);
 }
-
-.join-card i {
-  font-size: 40px;
-  color: #185a9d;
-  margin-bottom: 20px;
-}
-
-.join-card h3 {
-  font-size: 20px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.join-card p {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-
 .join-btn {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #185a9d;
+  background: #185a9d;
   color: white;
   text-decoration: none;
   border-radius: 30px;
-  font-weight: 500;
-  transition: 0.3s;
+  margin-top: 15px;
 }
 
-.join-btn:hover {
-  background-color: #134b85;
-}
-
-/* --- NEW: TESTIMONIALS SECTION --- */
+/* TESTIMONIALS */
 .testimonials {
   padding: 60px 20px;
   text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 .review-grid {
@@ -324,29 +225,10 @@ details p {
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   max-width: 400px;
-  text-align: left;
   border-left: 4px solid #ffcc00;
 }
 
-.review-card p {
-  font-style: italic;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.reviewer strong {
-  display: block;
-  color: #185a9d;
-  font-size: 15px;
-}
-
-.reviewer span {
-  font-size: 12px;
-  color: #888;
-}
-
-/* --- FOOTER --- */
+/* FOOTER */
 footer {
   background-color: #134b85;
   padding: 60px 0;
@@ -358,34 +240,5 @@ footer {
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
   color: white;
-  padding: 0 20px;
-}
-
-.set h3 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.set p {
-  opacity: 0.8;
-  font-size: 14px;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.set a {
-  display: block;
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  margin-top: 10px;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.set a:hover {
-  color: #ffcc00;
-  padding-left: 5px;
 }

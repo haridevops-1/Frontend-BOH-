@@ -138,29 +138,27 @@ main {
 
 /* Specific Card Colors */
 .field-1 {
-  border-top: 4px solid #333;
-} /* Total */
+  /* border-top: 1px solid #333; */
+} 
 .field-1 .total {
   color: #333;
 }
 
 .field-2 {
-  border-top: 4px solid orange;
-} /* Pending */
+  /* border-top: 1px solid orange; */
+} 
 .field-2 .pending {
   color: orange;
 }
 
 .field-3 {
-  border-top: 4px solid #2fb344;
-} /* Accepted */
+  /* border-top: 2px solid #2fb344; */
+} 
 .field-3 .accept {
   color: #2fb344;
 }
 
-.field-4 {
-  border-top: 4px solid #ef4444;
-} /* Rejected */
+ 
 .field-4 .reject {
   color: #ef4444;
 }
